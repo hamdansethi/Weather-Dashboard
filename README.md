@@ -69,11 +69,6 @@ weather-app/
 └── README.md
 ```
 
-## 💖 Aesthetic Themes
-
-* 🩷 Default light & pastel theme (optimized for female audience)
-* 🎨 Animated card transitions
-* 🧊 Optional glassmorphism variant (coming soon)
 
 ## 📦 Dependencies
 
