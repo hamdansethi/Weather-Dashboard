@@ -2,7 +2,7 @@
 
 A sleek and responsive weather application built using **React** and powered by the **WeatherAPI**. Enter any city to instantly get real-time weather conditions including temperature, humidity, wind speed, and more — presented in an elegant, animated UI.
 
-![Weather App Screenshot](screenshot.png)
+![Weather App Screenshot](screenshots\image_after.png)
 
 ## 🔧 Features
 
