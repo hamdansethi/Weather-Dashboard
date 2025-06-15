@@ -23,25 +23,3 @@ const WeatherInfo = ({ weather, loading, error }) => {
 };
 
 export default WeatherInfo;
-
-
-// const WeatherInfo = ({ weather, loading, error }) => {
-//   if (loading) return <p className="status-msg">Loading weather data...</p>;
-//   if (error) return <p className="status-msg error">Error: {error}</p>;
-//   if (!weather) return <p className="status-msg">Enter a city to see the weather.</p>;
-
-//   return (
-//     <div className="weather-info">
-//       <h2>{weather.location.name}, {weather.location.country}</h2>
-//       <p className="temp">{weather.current.temp_c}°C</p>
-//       <p className="condition">{weather.current.condition.text}</p>
-//       <div className="details">
-//         <p><strong>Humidity:</strong> {weather.current.humidity}%</p>
-//         <p><strong>Wind:</strong> {weather.current.wind_kph} kph</p>
-//         <p><strong>Feels Like:</strong> {weather.current.feelslike_c}°C</p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default WeatherInfo;

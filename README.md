@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# 🌤️ Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A sleek and responsive weather application built using **React** and powered by the **WeatherAPI**. Enter any city to instantly get real-time weather conditions including temperature, humidity, wind speed, and more — presented in an elegant, animated UI.
 
-## Available Scripts
+![Weather App Screenshot](screenshot.png)
 
-In the project directory, you can run:
+## 🔧 Features
 
-### `npm start`
+- 🌍 Search any city in the world
+- 🌡️ Real-time temperature, humidity, wind speed, and more
+- 💅 Beautiful UI with light theme & CSS animations
+- ⚡ Fast and responsive
+- 💻 Built with modern React components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🧪 Live Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> Coming soon… or deploy with [Vercel](https://vercel.com/) or [Netlify](https://netlify.com/) for free!
 
-### `npm test`
+## 🚀 Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1. Clone the repo
 
-### `npm run build`
+```bash
+git clone https://github.com/your-username/weather-app.git
+cd weather-app
+````
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. Install dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. Add your API key
 
-### `npm run eject`
+Create a `.env` file in the root directory and add your WeatherAPI key:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```env
+REACT_APP_WEATHER_API_KEY=your_api_key_here
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> 🔑 You can get a free key from [weatherapi.com](https://www.weatherapi.com/).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 4. Run the app
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm start
+```
 
-## Learn More
+The app should open automatically in your browser at `http://localhost:3000`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📁 Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+weather-app/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── SearchBar.jsx
+│   │   ├── WeatherInfo.jsx
+│   │   └── Footer.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   └── index.js
+├── .env
+├── package.json
+└── README.md
+```
 
-### Code Splitting
+## 💖 Aesthetic Themes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* 🩷 Default light & pastel theme (optimized for female audience)
+* 🎨 Animated card transitions
+* 🧊 Optional glassmorphism variant (coming soon)
 
-### Analyzing the Bundle Size
+## 📦 Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* React
+* WeatherAPI
+* CSS animations (no external frameworks)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
