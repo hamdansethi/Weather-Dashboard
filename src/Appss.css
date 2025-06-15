@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --primary: #c44585;
+  --accent: #f5c1d1;
+  --bg-light: #fff0f5;
+  --card-bg: #ffffff;
+  --text: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #fbe8f0, #ffffff);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Subtle Animated Circles Background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #ffddee 10%, transparent 11%) repeat;
+  background-size: 100px 100px;
+  animation: animateBG 40s linear infinite;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+@keyframes animateBG {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50px, -50px);
+  }
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px 100px;
+  z-index: 1;
+  position: relative;
+}
+
+/* Header */
+header {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 25px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 35px;
+  position: relative;
+  z-index: 2;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 14px 20px;
+  border: 2px solid var(--accent);
+  border-right: none;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  font-size: 1rem;
+  background: white;
+  color: var(--text);
+  transition: border-color 0.3s;
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+}
+
+.search-bar button {
+  padding: 14px 24px;
+  background: var(--primary);
+  color: white;
+  border: 2px solid var(--primary);
+  border-radius: 0 25px 25px 0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-bar button:hover {
+  background: #a5306b;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.weather-info {
+  background: linear-gradient(145deg, #fdf7ff, #fef0f5);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: 30px auto;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(189, 145, 197, 0.2);
+  font-family: 'Poppins', sans-serif;
+  animation: slideInUp 0.8s ease forwards;
+}
+
+.weather-info h2 {
+  font-size: 2rem;
+  color: #c44585;
+  margin-bottom: 10px;
+}
+
+.weather-info .temp {
+  font-size: 3.5rem;
+  color: #d63384;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.weather-info .condition {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #6c3483;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.weather-info .details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.status-msg {
+  text-align: center;
+  font-size: 1.1rem;
+  background: #fff0f6;
+  border-radius: 14px;
+  padding: 16px;
+  margin-top: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #aa336a;
+  animation: slideInUp 0.5s ease-out;
+}
+
+.status-msg.error {
+  background: #ffe6e6;
+  color: #b91c1c;
+  border: 1px solid #ffcccc;
+}
+
+
+
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 240, 245, 0.9);
+  text-align: center;
+  padding: 12px 0;
+  font-size: 0.9rem;
+  color: #666;
+  z-index: 3;
+  border-top: 1px solid #ddd;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

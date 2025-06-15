@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, html {
+  height: 100%;
+  background: linear-gradient(135deg, #1e1e2f, #2e2e48);
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Floating Background Blobs */
+body::before, body::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.08;
+  z-index: -1;
 }
 
-.App-header {
-  background-color: #282c34;
+body::before {
+  width: 500px;
+  height: 500px;
+  background: #ff6b6b;
+  top: 10%;
+  left: -150px;
+  animation: blobFloat 15s ease-in-out infinite alternate;
+}
+
+body::after {
+  width: 400px;
+  height: 400px;
+  background: #6b6bff;
+  bottom: 15%;
+  right: -120px;
+  animation: blobFloat 18s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes blobFloat {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(40px) rotate(10deg); }
+}
+
+/* App Layout */
+.app {
   min-height: 100vh;
+  padding: 40px 20px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* Header */
+header {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.search-bar input {
+  padding: 12px 20px;
+  border-radius: 25px 0 0 25px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  width: 250px;
+  background: #fff;
+  color: #333;
+}
+
+.search-bar button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  background-color: #ff6b6b;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #ff8787;
+}
+
+/* Weather Info Container */
+.weather-info {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+}
+
+/* Weather Card */
+.weather-card {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease;
+}
+
+.weather-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.weather-card .temp {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.weather-card .description {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  color: #eee;
+}
+
+.weather-card .details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/* Error & Loading */
+.error, .loading {
+  margin-top: 20px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background-color: rgba(255, 77, 79, 0.8);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.loading {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #eee;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(20, 20, 35, 0.9);
+  color: #aaa;
+  font-size: 0.9rem;
+  z-index: 1;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .search-bar input {
+    width: 160px;
   }
-  to {
-    transform: rotate(360deg);
+
+  header {
+    font-size: 2rem;
+  }
+
+  .weather-card {
+    padding: 20px;
   }
 }
